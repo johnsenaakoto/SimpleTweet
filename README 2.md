@@ -10,11 +10,14 @@ Time spent: **7** hours spent in total
 The following **required** functionality is completed:
 
 * [x] App can **sign in to Twitter using OAuth login**
-* [x] User can **can view the tweets from their home timeline**
+* [x] User can **view the tweets from their home timeline**
+* [x] User can **view relative timestamp**
 * [x] User can **refresh tweets timeline by pulling down to refresh**
-* [x] User can **view more tweets as they scroll with infinite pagination**
 
 The following **optional** features are implemented:
+* [x] User can **view more tweets as they scroll with infinite pagination**
+* [x] User can **click tweets to launch web browser**
+* [x] App has been **twitter branded**
 
 
 
@@ -33,9 +36,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 ## Notes
 
 Describe any challenges encountered while building the app.
-I had to clean project everytime before running AVD
-I had to cold boot the AVD sometimes when API calls were failing
-I could not use data binding on RecyclerView and MovieAdaptor
+The time in the android emulator is wrong, which causes relative timestamp to be wrong
 
 ## License
 
