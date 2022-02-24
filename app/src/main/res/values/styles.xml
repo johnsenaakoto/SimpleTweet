@@ -1,0 +1,26 @@
+<resources>
+
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/twitter_blue</item>
+        <item name="colorPrimaryVariant">@color/twitter_blue_50</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/twitter_blue_fill_pressed</item>
+        <item name="colorSecondaryVariant">@color/twitter_blue_30</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" >@color/dark1</item>
+    </style>
+
+</resources>
