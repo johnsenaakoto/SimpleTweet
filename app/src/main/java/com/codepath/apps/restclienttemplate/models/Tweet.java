@@ -1,5 +1,7 @@
 package com.codepath.apps.restclienttemplate.models;
 
+import android.util.Log;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -28,5 +30,10 @@ public class Tweet {
             tweets.add(fromJson(jsonArray.getJSONObject(i)));
         }
         return  tweets;
+    }
+
+    public String getFormattedTimestamp() {
+        Log.i("Created", createdAt);
+        return TimeFormatter.getTimeDifference(createdAt);
     }
 }
