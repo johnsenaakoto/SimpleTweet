@@ -23,9 +23,6 @@ public class TimeFormatter {
         format.setLenient(true);
         try {
             long diff = (System.currentTimeMillis() - format.parse(rawJsonDate).getTime()) / 1000;
-            Log.i("Current time", String.valueOf(System.currentTimeMillis()));
-            Log.i("CuTweet time", String.valueOf(format.parse(rawJsonDate).getTime()));
-            Log.i("Cudiff time", String.valueOf(diff));
             if (diff < 5)
                 time = "Just now";
             else if (diff < 60)
