@@ -4,11 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.codepath.apps.restclienttemplate.models.Tweet;
@@ -21,11 +25,12 @@ import okhttp3.Headers;
 
 public class ComposeActivity extends AppCompatActivity {
 
-    public static final int MAX_TWEET_LENGTH =140;
+    public static final int MAX_TWEET_LENGTH =280;
     public static final String TAG = "ComposeActivity";
 
     EditText etCompose;
     Button btnTweet;
+    TextView tvCount;
 
     TwitterClient client;
 
@@ -43,6 +48,7 @@ public class ComposeActivity extends AppCompatActivity {
 
         etCompose = findViewById(R.id.etCompose);
         btnTweet = findViewById(R.id.btnTweet);
+        tvCount = findViewById(R.id.tvCount);
 
         // Set click listener on button
         btnTweet.setOnClickListener(new View.OnClickListener() {
@@ -85,6 +91,37 @@ public class ComposeActivity extends AppCompatActivity {
                     }
                 });
 
+            }
+        });
+
+
+        etCompose.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                // Fires right as the text is being changed (even supplies the range of text)
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count,
+                                          int after) {
+                // Fires right before text is changing
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                // Fires right after the text has changed
+                String textLength = String.valueOf(s.length());
+                tvCount.setText(textLength + "/" + MAX_TWEET_LENGTH);
+
+                // disable button if text exceed limit
+                if (s.length() > MAX_TWEET_LENGTH){
+                    tvCount.setTextColor(Color.RED);
+                    btnTweet.setEnabled(false);
+                }
+                else {
+                    tvCount.setTextColor(Color.BLACK);
+                    btnTweet.setEnabled(true);
+                }
             }
         });
     }

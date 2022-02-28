@@ -1,4 +1,4 @@
-# Project 3 Unit 1 - *Simple Twitter*
+# Project 3 Unit 2 - *Simple Twitter*
 
 **Simple Twitter** is an android clone of the widely known Twitter app.
 Submitted by: **John Sena Akoto**
@@ -13,11 +13,15 @@ The following **required** functionality is completed:
 * [x] User can **view the tweets from their home timeline**
 * [x] User can **view relative timestamp**
 * [x] User can **refresh tweets timeline by pulling down to refresh**
+* [x] User can **click on Compose icon on AppBar**
+* [x] User can **publish tweet and insert into List**
 
 The following **optional** features are implemented:
 * [x] User can **view more tweets as they scroll with infinite pagination**
 * [x] User can **click tweets to launch web browser**
 * [x] App has been **twitter branded**
+* [x] App uses **Parcelable**
+* [x] App shows **character count** and **disable Tweet button** when character limit exceeded
 
 
 
